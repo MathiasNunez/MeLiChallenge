@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightGray">
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:padding="@dimen/margin_minimum"
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="@dimen/font_size_xlarge"
+                    android:text="@string/item_details_title"
+                    android:textAlignment="center"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_marginBottom="@dimen/margin_small">
+
+                <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/items_image_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:paddingTop="@dimen/margin_minimum"
+                        android:paddingBottom="@dimen/margin_minimum"/>
+
+                <FrameLayout
+                        android:id="@+id/images_page_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/price_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:textSize="@dimen/font_size_large"
+                    android:textColor="@color/blackish"
+                    android:fontFamily="sans-serif-medium"
+                    tools:text="$18,987.00"/>
+
+            <TextView
+                    android:id="@+id/price_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:textSize="@dimen/font_size_xlarge"
+                    android:textColor="@color/blackish"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="@dimen/margin_minimum"
+                    tools:text="$18,987.00"/>
+
+            <TextView
+                    android:id="@+id/price_installments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:textSize="@dimen/font_size_medium"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="sans-serif"
+                    tools:text="$18,987.00"/>
+
+            <TextView
+                    android:id="@+id/more_seller_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:textSize="@dimen/font_size_medium"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/black"
+                    android:text="@string/items_details_more_items"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/more_seller_items_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"/>
+
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:textSize="@dimen/font_size_medium"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/black"
+                    android:text="@string/item_details_description"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/description_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+            android:id="@+id/full_screen_progress_bar"
+            layout="@layout/layout_progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+</RelativeLayout>

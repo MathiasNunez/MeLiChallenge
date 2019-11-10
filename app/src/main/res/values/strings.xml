@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">MeLi Test</string>
+
+    <string name="no_connection_error_title">Oh no!\nNo tienes conexión a internet.</string>
+    <string name="no_connection_error_message">Por favor valida tu conexión a internet y reintenta luego.</string>
+    <string name="general_exit">Salir</string>
+    <string name="general_retry">Reintentar</string>
+    <string name="api_error_header">Oops, ha ocurrido un error.</string>
+    <string name="api_error_description">Hemos tenido problemas para conectar con nuestros servicies, intente más
+        tarde.
+    </string>
+
+    <!-- Search Screen -->
+    <string name="search_hint">Buscar</string>
+    <string name="installments_amount">%1$d x %2$s</string>
+    <string name="total_results">%1$d resultados encontrados</string>
+    <string name="displaying_items_result">%1$d de %2$d</string>
+
+    <!-- Item Details -->
+    <string name="item_details_title">Producto</string>
+    <string name="item_details_description">Descripción</string>
+    <string name="item_details_description_name">%1$s:</string>
+    <string name="items_details_more_items">Más productos de este vendedor</string>
+
+</resources>

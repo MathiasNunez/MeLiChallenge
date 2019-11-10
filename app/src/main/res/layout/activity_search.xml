@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+
+            android:id="@+id/parent_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:fillViewport="true"
+            android:background="@color/white">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".activities.SearchActivity">
+
+            <LinearLayout
+                    android:id="@+id/top_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margin_small"
+                    android:background="@color/colorPrimary">
+
+                <SearchView
+                        android:id="@+id/search_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:queryHint="@string/search_hint"
+                        android:iconifiedByDefault="false"
+                        android:background="@drawable/bg_white_rounded"
+                        android:queryBackground="@android:color/transparent"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recent_search_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_below="@id/top_container"/>
+
+            <LinearLayout
+                    android:id="@+id/search_result_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/top_container"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                <TextView
+                        android:id="@+id/total_results_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:textColor="@color/blackish"
+                        android:textSize="@dimen/font_size_normal"
+                        android:layout_gravity="start"
+                        android:padding="@dimen/margin_small"
+                        android:fontFamily="sans-serif"
+                        tools:text="1500 resultados"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/lightGray"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/search_result_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/layout_search_result_item"/>
+
+                <include
+                        android:id="@+id/paging_progress_bar"
+                        layout="@layout/layout_paging_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        tools:visibility="visible"/>
+
+            </LinearLayout>
+
+            <include
+                    android:id="@+id/full_screen_progress_bar"
+                    layout="@layout/layout_progress_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/top_container"
+                    android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+            android:id="@+id/items_displayed_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_orange_rounded"
+            android:padding="@dimen/margin_minimum"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:textSize="@dimen/font_size_medium"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/white"
+            tools:text="10 de 1300"/>
+
+</RelativeLayout>
