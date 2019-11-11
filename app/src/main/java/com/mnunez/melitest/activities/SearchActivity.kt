@@ -128,7 +128,7 @@ class SearchActivity : MLBaseActivity<SearchActivity, SearchPresenter>(),
 
     override fun onRecentSearchClicked(query: String) {
         hideKeyboard()
-        search_view.queryHint = query
+        search_view.setQuery(query, false)
         mPresenter.search(query)
     }
 
