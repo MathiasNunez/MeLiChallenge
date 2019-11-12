@@ -11,7 +11,7 @@
 
 ## Arquitectura
 
-Se aplica en la aplicación el patrón **MVP**, Model View Presenter, con el fin de separar la capa de negocio de la capa de  presentación. La UI está implementada en cada xml layout correspondiente y su controlador (Activity o Fragment), el cuál implementa una interfaz llamada BaseView para mantenerlo indiferente al Presenter asociado.
+Se aplica en la aplicación el patrón **MVP**, Model View Presenter, con el fin de separar la capa de negocio de la capa de  presentación. La UI está implementada en cada xml layout correspondiente y su controlador (Activity o Fragment), el cual implementa una interfaz llamada BaseView para mantenerlo indiferente al Presenter asociado.
 
 Por esta razón, una estructura típica para una pantalla sería:
 * XML Layout.
@@ -31,12 +31,12 @@ También brinda un conjunto de extensiones y utlidades que son y pueden ser util
   
 * Listado de Resultados:
   - La aplicación revela un listado de productos que coinciden con la consulta mencionada en el punto anterior.
-  - Se provee de una imágen, el nombre y precio de cada producto.
-  - Al tope del listado se indica cuantos resultados fueron encontrdos.
+  - Se provee de una imagen, el nombre y precio de cada producto.
+  - Al tope del listado se indica cuántos resultados fueron encontrados.
   - La aplicación inicialmente revela los primeros 20 y a medida que el usuario navega por la lista, se cargan otros 20 más y así sucesivamente.
   - En la parte baja derecha de la pantalla, se mustra un indicador flotante con la cantidad de resultados que están siendo mostrados.
 
 * Detalle de un producto:
   - Esta pantalla revela información más completa sobre un producto previamente seleccionado en el listado antes mencionado.
-  - Al tope, se mustra un slider con las imagenes de este producto y un indicador de cuantas imagenes hay.
+  - Al tope, se muestra un slider con las imágenes de este producto y un indicador de cuántas imágenes hay.
   - Se muestra el nombre, precio y pago por cuotas, seguido de más búsquedas de ese vendedor (presentadas de forma similar al listado de producto, las cuales son funcionales y admiten que el usuario navege al detalle de la misma) y finalmente una descripción completa del producto.
