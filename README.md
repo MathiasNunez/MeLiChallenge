@@ -34,7 +34,7 @@ También brinda un conjunto de extensiones y utlidades que son y pueden ser util
   - Se provee de una imagen, el nombre y precio de cada producto.
   - Al tope del listado se indica cuántos resultados fueron encontrados.
   - La aplicación inicialmente revela los primeros 20 y a medida que el usuario navega por la lista, se cargan otros 20 más y así sucesivamente.
-  - En la parte baja derecha de la pantalla, se mustra un indicador flotante con la cantidad de resultados que están siendo mostrados.
+  - En la parte baja derecha de la pantalla, se muestra un indicador flotante con la cantidad de resultados que están siendo mostrados.
 
 * Detalle de un producto:
   - Esta pantalla revela información más completa sobre un producto previamente seleccionado en el listado antes mencionado.
